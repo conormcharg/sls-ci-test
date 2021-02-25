@@ -1,0 +1,28 @@
+# serverless.yml
+
+service: numpy-test
+
+provider:
+  name: aws
+  runtime: python3.8
+
+functions:
+  numpy:
+    handler: handler.main
+
+# serverless.yml
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
+
+
+package:
+  exclude:
+    - .venv/**
+    - .git/**
+    - __pycache__/** # for python 3.x
+    - '*.pyc' # if using python 2.x
