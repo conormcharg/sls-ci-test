@@ -16,6 +16,6 @@ script:
 
   deploy:
     provider: script
-    script: serverless deploy --stage staging
+    script: serverless deploy
     on:
       branch: master
