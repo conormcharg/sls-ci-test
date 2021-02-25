@@ -5,4 +5,11 @@ import scipy as sp
 from handler import main
 
 def test_handler_output():
-    assert main(None, None) == np.arange(15).reshape(3, 5)
+
+    target = np.arange(15).reshape(3, 5).tolist()
+    print(target)
+
+    actual = main(None, None).tolist()
+    print(actual)
+
+    assert main(None, None).tolist() == target
