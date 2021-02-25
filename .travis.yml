@@ -14,8 +14,3 @@ script:
   - pytest test_handler.py
   - serverless deploy
 
-deploy:
-  provider: script
-  script: serverless deploy
-  on:
-    branch: master
