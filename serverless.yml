@@ -9,6 +9,10 @@ provider:
 functions:
   numpy:
     handler: handler.main
+    events:
+      - http:
+          path: numpytest
+          method: GET
 
 # serverless.yml
 

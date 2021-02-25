@@ -10,6 +10,8 @@ def main(event, context):
     print("Your numpy array:")
     print(a)
 
+    return("Hello world")
+
 
 if __name__ == "__main__":
     main('', '')
